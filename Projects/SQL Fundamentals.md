@@ -160,6 +160,6 @@ The snippet above shows SQL taking the amount column and displaying the sum of t
 A: To begin, we are going to use the GROUP_CONCAT function to concatenate an & as our separator. This is done by the command **GROUP_CONCAT(name, SEPARATOR " & ");**
 Then we need to specify it is from hacking_tools, and then to make sure it is not ending in a zero (even number!) we make sure that there is no remainder with MOD 0.
 
-![alt text](<noah-repos/Images/sql-fig14.png>)
+![alt text](<Images/sql-fig14>)
 
 **Thanks for reading my walkthrough!**
