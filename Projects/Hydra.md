@@ -10,7 +10,7 @@ Let Hydra run. It may take a little bit. Bruteforcing requires a fair amount of 
 
 **`2673a7dd116de68e85c48ec0b1f2612e`** is our answer once we connect to the website, and login using molly's credentials which is our target.
 
-![alt text](<Images/Hydra-fig1.png>)
+![alt text](<Images/hydra-fig1.png>)
 
 *Q2: Use Hydra to bruteforce molly's SSH password. What is flag 2?*
 
@@ -20,7 +20,7 @@ A: Once again, time to use hydra. Let it run:
 
 Once it is run, time to connect via ssh, and read it out: 
 
-![alt text](<Images/Hydra-fig2.png>)
+![alt text](<Images/hydra-fig2.png>)
 That's our answer! **Thanks for reading!**
 
 
