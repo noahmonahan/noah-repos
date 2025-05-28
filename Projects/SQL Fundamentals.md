@@ -10,7 +10,7 @@ A: **Relational** databases store data that is typically related to each other. 
 
 *Q3: In our example, once a record of a book is inserted into our "Books" table, it would be represented as a ___ in that table?*
 
-![alt text](<Images/sql-fig1.png>)
+![alt text](<noah-repos/Images/sql-fig1.png>)
 
 A: In the example, once a book is inserted into the books table, it would be represented as a **row** in the table.
 
@@ -39,7 +39,7 @@ A: **SQL, or Structured Query Language** is what is used to interact with a rela
 A: First, we must log into SQL. This can be done via the command *mysql -u USER -p PASSWORD*.
 Once that is done, to show databases, we enter the following command into SQL: *SHOW DATABASES;*. The semicolon is **EXTREMELY** important, as without it, it is improper syntax, and you will error out.
 
-![alt text](<Images/sql-fig2.png>)
+![alt text](<noah-repos/Images/sql-fig2.png>)
 
 We can see that the flag we are looking for is the first database shown.
 
@@ -47,7 +47,7 @@ We can see that the flag we are looking for is the first database shown.
 
 A:  To begin, we must select *task_4_db* as our active database. To do this, we need to tell SQL to do so: *USE task_4_db;* is the command. Once we have the database active, we can now look at the tables in the database: *SHOW TABLES;*.
 
-![alt text](<Images/sql-fig3.png>)
+![alt text](<noah-repos/Images/sql-fig3.png>)
 
 **Task 5 - CRUD Operations**
 
@@ -55,7 +55,7 @@ A:  To begin, we must select *task_4_db* as our active database. To do this, we 
 
 A: Using the same initial steps we took in task 4, we can navigate over to the **tools_db** database. From there, this is where it differs. When we show the tables, it doesn't show us anything except the name of the only table in the database itself. Let's see what's in the actual table. We do this through a **Read Operation** (AKA SELECT). This is accomplished via the following command: *SELECT (asterisk) FROM **TABLENAME***. Once we are viewing the table, we will have our answer: 
 
-![alt text](<Images/sql-fig4.png>)
+![alt text](<noah-repos/Images/sql-fig4.png>)
 
 *Q2: Using the **tools_db** databse, what is the shared category for both **USB Rubber Ducky** and **Bash Bunny**?*
 
@@ -67,7 +67,7 @@ A: As seen in the table above, both items are categorized the same. Both of thes
 
 A: To answer this question, we are going to be using the **DISTINCT** clause. This will directly tell us how many unique categories there are by looking at and comparing the rows. We do this via the following: *SELECT DISTINCT category FROM hacking_tools;*
 
-![alt text](<Images/sql-fig5.png>)
+![alt text](<noah-repos/Images/sql-fig5.png>)
 
 From the image, we can see that our answer is **Six**.
 
@@ -79,13 +79,13 @@ FROM hacking_tools
 ORDER BY name ASC**.
 The table will appear alphabetically, and we can see that **Bash Bunny** is our answer.
 
-![alt text](<Images/sql-fig6.png>)
+![alt text](<noah-repos/Images/sql-fig6.png>)
 
 *Q3: Using the **tools_db** database, what is the first tool (by name) in descending order from the **hacking_tools** table?*
 
 A: This answer will be very similar to the last. It is basically the same command with a different modified in the **ORDER BY** line. Instead of **ASC**, we will be using **DESC**. The result is as follows:
 
-![alt text](<Images/sql-fig7.png>)
+![alt text](<noah-repos/Images/sql-fig7.png>)
 
 We can see that our answer is Wi-Fi Pineapple.
 
@@ -99,7 +99,7 @@ FROM hacking_tools
 WHERE category = "Multi-tool"**
 This allows us to just search for the "Mutli-tool" category in the database.
 
-![alt text](<Images/sql-fig8.png>)
+![alt text](<noah-repos/Images/sql-fig8.png>)
 
 As seen in the image, our answer is the **Flipper Zero**.
 
@@ -112,7 +112,7 @@ WHERE amount >= "300";**
 
 Upon running the command, we see two results; both from the same category:
 
-![alt text](<Images/sql-fig9.png>)
+![alt text](<noah-repos/Images/sql-fig9.png>)
 
 
 This makes our answer **RFID Cloning**.
@@ -128,7 +128,7 @@ WHERE category = "Network Intelligence" AND amount < "100";**
 
 We needed to add an **AND** operator to our logic in SQL to have both requirements be present in our query. Let's see the results:
 
-![alt text](<Images/sql-fig10.png>)
+![alt text](<noah-repos/Images/sql-fig10.png>)
 
 **LAN Turtle** is our answer.
 
@@ -138,11 +138,11 @@ We needed to add an **AND** operator to our logic in SQL to have both requiremen
 
 A: Using the **LENGTH()** function, we can determine which name has the most characters. We can see from the image below the most is 16 characters:
 
-![alt text](<Images/sql-fig11.png>)
+![alt text](<noah-repos/Images/sql-fig11.png>)
 
 We can see that row 4 has 16 characters. We could get extremely fancy with it. Let's do it:
 
-![alt text](<Images/sql-fig12.png>)
+![alt text](<noah-repos/Images/sql-fig12.png>)
 
 From the image above, we ordered our hacking tools by character length in their names, in descending order. Thus, our answer is **USB Rubber Ducky**
 
@@ -151,7 +151,7 @@ From the image above, we ordered our hacking tools by character length in their 
 
 A: What the question is really asking for is the sum of the **amount** column. So, let's do just that. 
 
-![alt text](<Images/sql-fig13.png>)
+![alt text](<noah-repos/Images/sql-fig13.png>)
 
 The snippet above shows SQL taking the amount column and displaying the sum of the prices. Our answer is **1444**.
 
@@ -160,6 +160,6 @@ The snippet above shows SQL taking the amount column and displaying the sum of t
 A: To begin, we are going to use the GROUP_CONCAT function to concatenate an & as our separator. This is done by the command **GROUP_CONCAT(name, SEPARATOR " & ");**
 Then we need to specify it is from hacking_tools, and then to make sure it is not ending in a zero (even number!) we make sure that there is no remainder with MOD 0.
 
-![alt text](<Images/sql-fig14.png>)
+![alt text](<noah-repos/Images/sql-fig14.png>)
 
 **Thanks for reading my walkthrough!**
